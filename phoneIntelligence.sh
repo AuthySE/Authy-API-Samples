@@ -6,6 +6,6 @@ echo curl https://api.authy.com/protected/$AUTHY_API_FORMAT/phones/info?api_key=
 echo -d country_code=\$COUNTRY_CODE
 echo -d phone_number=\$PHONE_NUMBER 
 echo
-echo Response
-curl "https://api.authy.com/protected/$AUTHY_API_FORMAT/phones/info?api_key=$AUTHY_API_KEY&country_code=$USER_COUNTRY&phone_number=$USER_PHONE"
+echo Response:
+curl -s "https://api.authy.com/protected/$AUTHY_API_FORMAT/phones/info?api_key=$AUTHY_API_KEY&country_code=$USER_COUNTRY&phone_number=$USER_PHONE" | underscore print --outfmt pretty
 echo
