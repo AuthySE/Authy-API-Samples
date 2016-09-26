@@ -42,11 +42,11 @@ Before you run any of the following scripts, make sure you have execution permis
    $ chmod +x *.sh
    ```
 
-Visit the following links to view our API documentation:
+For a more deeper view of our APIs use the following links:
+* [Authy OneTouch](http://docs.authy.com/onetouch.html)
 * [TOTP - Time-based One Time Password](http://docs.authy.com/totp.html)
 * [Phone Intelligence](http://docs.authy.com/phone_intelligence.html)
 * [Phone Verification](http://docs.authy.com/phone_verification.html)
-* [Authy OneTouch](http://docs.authy.com/onetouch.html)
 
 1. **User Registration - userRegistration.sh** - Before you can secure a user's login you need to create an Authy user. Authy requires you to send an email, cellphone and country code for the user to be registered. In response you get an Authy ID which you must then store with your user's profile information in your own application/database.
 
