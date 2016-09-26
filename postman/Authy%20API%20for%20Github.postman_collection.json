@@ -242,6 +242,29 @@
 						"description": ""
 					},
 					"response": []
+				},
+				{
+					"name": "User Registration",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": "var data = JSON.parse(responseBody);\npostman.setEnvironmentVariable(\"AUTHY_ID\", data.user.id);"
+							}
+						}
+					],
+					"request": {
+						"url": "https://api.authy.com/protected/json/users/new?api_key={{AUTHY_API_KEY}}&user[email]={{USER_EMAIL}}&user[cellphone]={{USER_PHONE}}&user[country_code]={{USER_COUNTRY}}&send_install_link_via_sms=false",
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
 				}
 			]
 		}
