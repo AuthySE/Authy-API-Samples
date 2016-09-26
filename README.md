@@ -64,8 +64,13 @@ For a more deeper view of our APIs use the following links:
 
 1. **Phone Verification - phoneVerificatioRequest.sh / phoneVerificationCheck.sh** - The Authy Phone Verification API allows you to verify that the user has the device in their possession. The Authy Phone Verification API lets you request a verification code to be sent to the user and also verify that the code received by the user is valid.
 
-
 That's it!
+
+## POSTMAN DEMO
+
+We've also uploaded a Postman (v2) collection of API calls and a demo environment.   [Postman Env]() | [Postman Collection]()
+
+![alt tag](http://url/to/img.png)
 
 ## Meta
 

@@ -1,0 +1,249 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Authy API for Github",
+		"_postman_id": "889983fe-10b2-0a22-7830-ec0b9acdfeb7",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "OneTouch",
+			"description": "",
+			"item": [
+				{
+					"name": "OneTouch Request",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": "var data = JSON.parse(responseBody);\npostman.setEnvironmentVariable(\"OT_UUID\", data.approval_request.uuid);"
+							}
+						}
+					],
+					"request": {
+						"url": "https://api.authy.com/onetouch/json/users/{{AUTHY_ID}}/approval_requests?api_key={{AUTHY_API_KEY}}&message=This is a OneTouch test from Postman&details[Username]=you@your.com&details[Location]=San Francisco&details[Purpose]=Testing&seconds_to_expire=600",
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "OneTouch Request Status",
+					"request": {
+						"url": "https://api.authy.com/onetouch/json/approval_requests/{{OT_UUID}}?api_key={{AUTHY_API_KEY}}",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Phone Intel",
+			"description": "",
+			"item": [
+				{
+					"name": "Phone Number Info",
+					"request": {
+						"url": "https://api.authy.com/protected/json/phones/info?api_key={{AUTHY_API_KEY}}&country_code={{USER_COUNTRY}}&phone_number={{USER_PHONE}}",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Phone Verification",
+			"description": "",
+			"item": [
+				{
+					"name": "Start Verification via SMS (English local)",
+					"request": {
+						"url": "https://api.authy.com/protected/json/phones/verification/start?api_key={{AUTHY_API_KEY}}&via=sms&country_code={{USER_COUNTRY}}&phone_number={{USER_PHONE}}&locale=en",
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Start Verification via voice (English locale)",
+					"request": {
+						"url": "https://api.authy.com/protected/json/phones/verification/start?api_key={{AUTHY_API_KEY}}&via=call&country_code={{USER_COUNTRY}}&phone_number={{USER_PHONE}}&locale=en",
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Verify Code",
+					"request": {
+						"url": "https://api.authy.com/protected/json/phones/verification/check?api_key={{AUTHY_API_KEY}}&country_code={{USER_COUNTRY}}&phone_number={{USER_PHONE}}&verification_code=3363",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Start Verification via SMS (Arabic locale)",
+					"request": {
+						"url": "https://api.authy.com/protected/json/phones/verification/start?api_key={{AUTHY_API_KEY}}&via=sms&country_code={{USER_COUNTRY}}&phone_number={{USER_PHONE}}&locale=ar",
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Start Verification via voice (Arabic locale)",
+					"request": {
+						"url": "https://api.authy.com/protected/json/phones/verification/start?api_key={{AUTHY_API_KEY}}&via=call&country_code={{USER_COUNTRY}}&phone_number={{USER_PHONE}}&locale=ar",
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Start Verification via SMS (Spanish locale)",
+					"request": {
+						"url": "https://api.authy.com/protected/json/phones/verification/start?api_key={{AUTHY_API_KEY}}&via=sms&country_code={{USER_COUNTRY}}&phone_number={{USER_PHONE}}&locale=es",
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Start Verification via voice (Spanish locale)",
+					"request": {
+						"url": "https://api.authy.com/protected/json/phones/verification/start?api_key={{AUTHY_API_KEY}}&via=call&country_code={{USER_COUNTRY}}&phone_number={{USER_PHONE}}&locale=es",
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "TOTP",
+			"description": "",
+			"item": [
+				{
+					"name": "TOTP token via SMS (FORCE)",
+					"request": {
+						"url": "https://api.authy.com/protected/json/sms/{{AUTHY_ID}}?api_key={{AUTHY_API_KEY}}&force=true",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "TOTP token request",
+					"request": {
+						"url": "https://api.authy.com/protected/json/sms/{{AUTHY_ID}}?api_key={{AUTHY_API_KEY}}&force=false",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "TOTP token via voice",
+					"request": {
+						"url": "https://api.authy.com/protected/json/call/{{AUTHY_ID}}?api_key={{AUTHY_API_KEY}}&force=true",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Verify TOTP token",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": "postman.setEnvironmentVariable(\"TOKEN\", \"0000000\");"
+							}
+						}
+					],
+					"request": {
+						"url": "https://api.authy.com/protected/json/verify/{{TOKEN}}/{{AUTHY_ID}}?api_key={{AUTHY_API_KEY}}",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
