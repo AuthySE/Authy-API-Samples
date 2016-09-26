@@ -44,9 +44,9 @@ All the API calls described below require that you send the Authy API Key with y
 
 1. User Registration - userRegistration.sh - Before you can secure a user's login you need to create an Authy user. Authy requires you to send an email, cellphone and country code for the user to be registered. In response you get an Authy ID which you must then store with your user's profile information in your own application/database.
 
-1. Send SMS & Force Send SMS - sendSMS_Ignored.sh / sendSMS.sh - Probably the most common way of doing Two-Factor Authentication is using SMS. While insecure and not providing the best user experience, you can request a SMS message to be sent to the user with the one time passcode. By default, this call will be ignored if the user has downloaded and registered the Authy mobile app against their phone number (sendSMS_Ignored.sh). This can be overriden using the force=true option (sendSMS.sh)
+1. Send SMS & Force Send SMS - sendSMS_Ignored.sh / sendSMS.sh - Probably the most common way of doing Two-Factor Authentication is using SMS. While insecure and not providing the best user experience, you can request a SMS message to be sent to the user with the one time passcode. By default, this call will be ignored if the user has downloaded and registered the Authy mobile app against their phone number (sendSMS_Ignored.sh). This can be overriden using the ```force=true``` option (sendSMS.sh)
 
-1. Make Phone Call - makeCall.sh - For users that don't have a smartphone or having trouble receiving one time passcodes via SMS, Authy allows you to use phone calls instead. By default, this call will be ignored if the user has downloaded and registered the Authy mobile app against their phone number. This can be overriden using the force=true option (sendSMS.sh)
+1. Make Phone Call - makeCall.sh - For users that don't have a smartphone or having trouble receiving one time passcodes via SMS, Authy allows you to use phone calls instead. By default, this call will be ignored if the user has downloaded and registered the Authy mobile app against their phone number. This can be overriden using the ```force=true``` option (sendSMS.sh)
 
 1. Verify Token - verifyToken.sh - To verify a token simply pass in the token that the user entered and the Authy ID of the user. The Authy API response will tell you if the token is valid or not.
 
