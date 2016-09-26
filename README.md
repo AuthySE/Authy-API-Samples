@@ -42,7 +42,7 @@ Before you run any of the following scripts, make sure you have execution permis
    $ chmod +x *.sh
    ```
 
-For a more deeper view of our APIs use the following links:
+For a deeper look into our APIs check out our docs:
 * [Authy OneTouch](http://docs.authy.com/onetouch.html)
 * [TOTP - Time-based One Time Password](http://docs.authy.com/totp.html)
 * [Phone Intelligence](http://docs.authy.com/phone_intelligence.html)
