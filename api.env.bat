@@ -1,0 +1,11 @@
+set AUTHY_API_FORMAT=json
+set AUTHY_API_KEY=AUTHY_API_KEY
+
+set USER_EMAIL=USER_EMAIL
+set USER_PHONE=USER_PHONE
+set USER_COUNTRY=USER_COUNTRY
+set OT_MESSAGE="OneTouch Approval Request"
+set OT_DETAILS="Message Details:My message details"
+set OT_TTL=120
+
+set AUTHY_ID=AUTHY_ID
