@@ -26,7 +26,7 @@ Each one of these scripts is designed to run independently and perform the desig
    $ cd Authy-API-Samples
    ```
 
-1. Update the .api.env with your user/environment/API information and then load the variables into your environment. If you are using a UNIX operating system, just use the source command to load the variables into your environment.
+1. Update the .api.env file if you are on macOS/Linux or the .api.env.bat file with your user/environment/API information and then load the variables into your environment. If you are using macOS or Linux operating systems, just use the source command to load the variables into your environment.
  
    ```bash
    $ source .api.env
