@@ -6,6 +6,6 @@ set USER_PHONE=USER_PHONE
 set USER_COUNTRY=USER_COUNTRY
 set OT_MESSAGE="OneTouch Approval Request"
 set OT_DETAILS="Message Details:My message details"
-set OT_TTL=120
+set OT_TTL=300
 
 set AUTHY_ID=AUTHY_ID
