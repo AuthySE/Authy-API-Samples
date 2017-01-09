@@ -2,7 +2,7 @@
 	"variables": [],
 	"info": {
 		"name": "Authy API for Github",
-		"_postman_id": "889983fe-10b2-0a22-7830-ec0b9acdfeb7",
+		"_postman_id": "6b637e9e-69d3-3014-79e6-3ec821dbfcb1",
 		"description": "",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
@@ -18,7 +18,10 @@
 							"listen": "test",
 							"script": {
 								"type": "text/javascript",
-								"exec": "var data = JSON.parse(responseBody);\npostman.setEnvironmentVariable(\"OT_UUID\", data.approval_request.uuid);"
+								"exec": [
+									"var data = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"OT_UUID\", data.approval_request.uuid);"
+								]
 							}
 						}
 					],
@@ -26,10 +29,7 @@
 						"url": "https://api.authy.com/onetouch/json/users/{{AUTHY_ID}}/approval_requests?api_key={{AUTHY_API_KEY}}&message=This is a OneTouch test from Postman&details[Username]=you@your.com&details[Location]=San Francisco&details[Purpose]=Testing&seconds_to_expire=600",
 						"method": "POST",
 						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": []
-						},
+						"body": {},
 						"description": ""
 					},
 					"response": []
@@ -40,10 +40,7 @@
 						"url": "https://api.authy.com/onetouch/json/approval_requests/{{OT_UUID}}?api_key={{AUTHY_API_KEY}}",
 						"method": "GET",
 						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": []
-						},
+						"body": {},
 						"description": ""
 					},
 					"response": []
@@ -60,10 +57,7 @@
 						"url": "https://api.authy.com/protected/json/phones/info?api_key={{AUTHY_API_KEY}}&country_code={{USER_COUNTRY}}&phone_number={{USER_PHONE}}",
 						"method": "GET",
 						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": []
-						},
+						"body": {},
 						"description": ""
 					},
 					"response": []
@@ -80,10 +74,7 @@
 						"url": "https://api.authy.com/protected/json/phones/verification/start?api_key={{AUTHY_API_KEY}}&via=sms&country_code={{USER_COUNTRY}}&phone_number={{USER_PHONE}}&locale=en",
 						"method": "POST",
 						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": []
-						},
+						"body": {},
 						"description": ""
 					},
 					"response": []
@@ -94,10 +85,7 @@
 						"url": "https://api.authy.com/protected/json/phones/verification/start?api_key={{AUTHY_API_KEY}}&via=call&country_code={{USER_COUNTRY}}&phone_number={{USER_PHONE}}&locale=en",
 						"method": "POST",
 						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": []
-						},
+						"body": {},
 						"description": ""
 					},
 					"response": []
@@ -108,10 +96,7 @@
 						"url": "https://api.authy.com/protected/json/phones/verification/check?api_key={{AUTHY_API_KEY}}&country_code={{USER_COUNTRY}}&phone_number={{USER_PHONE}}&verification_code=3363",
 						"method": "GET",
 						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": []
-						},
+						"body": {},
 						"description": ""
 					},
 					"response": []
@@ -122,10 +107,7 @@
 						"url": "https://api.authy.com/protected/json/phones/verification/start?api_key={{AUTHY_API_KEY}}&via=sms&country_code={{USER_COUNTRY}}&phone_number={{USER_PHONE}}&locale=ar",
 						"method": "POST",
 						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": []
-						},
+						"body": {},
 						"description": ""
 					},
 					"response": []
@@ -136,10 +118,7 @@
 						"url": "https://api.authy.com/protected/json/phones/verification/start?api_key={{AUTHY_API_KEY}}&via=call&country_code={{USER_COUNTRY}}&phone_number={{USER_PHONE}}&locale=ar",
 						"method": "POST",
 						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": []
-						},
+						"body": {},
 						"description": ""
 					},
 					"response": []
@@ -150,10 +129,7 @@
 						"url": "https://api.authy.com/protected/json/phones/verification/start?api_key={{AUTHY_API_KEY}}&via=sms&country_code={{USER_COUNTRY}}&phone_number={{USER_PHONE}}&locale=es",
 						"method": "POST",
 						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": []
-						},
+						"body": {},
 						"description": ""
 					},
 					"response": []
@@ -164,10 +140,7 @@
 						"url": "https://api.authy.com/protected/json/phones/verification/start?api_key={{AUTHY_API_KEY}}&via=call&country_code={{USER_COUNTRY}}&phone_number={{USER_PHONE}}&locale=es",
 						"method": "POST",
 						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": []
-						},
+						"body": {},
 						"description": ""
 					},
 					"response": []
@@ -184,10 +157,7 @@
 						"url": "https://api.authy.com/protected/json/sms/{{AUTHY_ID}}?api_key={{AUTHY_API_KEY}}&force=true",
 						"method": "GET",
 						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": []
-						},
+						"body": {},
 						"description": ""
 					},
 					"response": []
@@ -198,10 +168,7 @@
 						"url": "https://api.authy.com/protected/json/sms/{{AUTHY_ID}}?api_key={{AUTHY_API_KEY}}&force=false",
 						"method": "GET",
 						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": []
-						},
+						"body": {},
 						"description": ""
 					},
 					"response": []
@@ -212,10 +179,7 @@
 						"url": "https://api.authy.com/protected/json/call/{{AUTHY_ID}}?api_key={{AUTHY_API_KEY}}&force=true",
 						"method": "GET",
 						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": []
-						},
+						"body": {},
 						"description": ""
 					},
 					"response": []
@@ -227,7 +191,9 @@
 							"listen": "prerequest",
 							"script": {
 								"type": "text/javascript",
-								"exec": "postman.setEnvironmentVariable(\"TOKEN\", \"0000000\");"
+								"exec": [
+									"postman.setEnvironmentVariable(\"TOKEN\", \"0000000\");"
+								]
 							}
 						}
 					],
@@ -235,10 +201,24 @@
 						"url": "https://api.authy.com/protected/json/verify/{{TOKEN}}/{{AUTHY_ID}}?api_key={{AUTHY_API_KEY}}",
 						"method": "GET",
 						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": []
-						},
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Authy User",
+					"request": {
+						"url": "https://api.authy.com/protected/json/users/{{AUTHY_ID}}/delete",
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Authy-API-Key",
+								"value": "{{AUTHY_API_KEY}}",
+								"description": ""
+							}
+						],
+						"body": {},
 						"description": ""
 					},
 					"response": []
@@ -250,7 +230,10 @@
 							"listen": "test",
 							"script": {
 								"type": "text/javascript",
-								"exec": "var data = JSON.parse(responseBody);\npostman.setEnvironmentVariable(\"AUTHY_ID\", data.user.id);"
+								"exec": [
+									"var data = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"AUTHY_ID\", data.user.id);"
+								]
 							}
 						}
 					],
@@ -258,10 +241,7 @@
 						"url": "https://api.authy.com/protected/json/users/new?api_key={{AUTHY_API_KEY}}&user[email]={{USER_EMAIL}}&user[cellphone]={{USER_PHONE}}&user[country_code]={{USER_COUNTRY}}&send_install_link_via_sms=false",
 						"method": "POST",
 						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": []
-						},
+						"body": {},
 						"description": ""
 					},
 					"response": []
