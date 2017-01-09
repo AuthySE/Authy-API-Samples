@@ -10,9 +10,9 @@ echo -d details=%%OT_DETAILS%%
 echo -d seconds_to_expire=%%OT_TTL%%
 echo.
 echo Response
-curl -X POST "http://api.authy.com/onetouch/%AUTHY_API_FORMAT%/users/%AUTHY_ID%/approval_requests" ^
--H "X-Authy-API-Key: %AUTHY_API_KEY%" ^
--d message="%OT_MESSAGE%" ^
--d details="%OT_DETAILS%" ^
--d seconds_to_expire="%OT_TTL%"
+curl -X POST "https://api.authy.com/onetouch/%AUTHY_API_FORMAT%/users/%AUTHY_ID%/approval_requests" ^
+ -H "X-Authy-API-Key: %AUTHY_API_KEY%" ^
+ -d message=%OT_MESSAGE% ^
+ -d details=%OT_DETAILS% ^
+ -d seconds_to_expire=%OT_TTL%
 echo.

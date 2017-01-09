@@ -8,5 +8,5 @@ echo -H "X-Authy-API-Key: %%AUTHY_API_KEY%%"
 echo.
 echo Response
 curl -i "http://api.authy.com/protected/json/call/%AUTHY_ID%?force=true" ^
--H "X-Authy-API-Key: %AUTHY_API_KEY%"
+ -H "X-Authy-API-Key: %AUTHY_API_KEY%"
 echo.

@@ -7,5 +7,6 @@ echo curl -i "https://api.authy.com/protected/%%AUTHY_API_FORMAT%%/verify/%%TOKE
 echo -H "X-Authy-API-Key: %%AUTHY_API_KEY%%"
 echo.
 echo Response
-curl -i "http://api.authy.com/protected/%AUTHY_API_FORMAT%/verify/%1/%AUTHY_ID%" -H "X-Authy-API-Key: %AUTHY_API_KEY%"
+curl -i "http://api.authy.com/protected/%AUTHY_API_FORMAT%/verify/%1/%AUTHY_ID%" ^
+ -H "X-Authy-API-Key: %AUTHY_API_KEY%"
 echo.

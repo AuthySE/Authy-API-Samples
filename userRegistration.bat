@@ -10,5 +10,9 @@ echo -d user[cellphone]=%%USER_PHONE%%
 echo -d user[country_code]=%%USER_COUNTRY%%
 echo.
 echo Response
-curl "http://api.authy.com/protected/%AUTHY_API_FORMAT%/users/new" -d user[email]=%USER_EMAIL% -d user[cellphone]=%USER_PHONE% -d user[country_code]=%USER_COUNTRY% -H "X-Authy-API-Key: %AUTHY_API_KEY%"
+curl "http://api.authy.com/protected/%AUTHY_API_FORMAT%/users/new" ^
+ -H "X-Authy-API-Key: %AUTHY_API_KEY%" ^
+ -d user[email]=%USER_EMAIL% ^
+ -d user[cellphone]=%USER_PHONE% ^
+ -d user[country_code]=%USER_COUNTRY%
 echo.
