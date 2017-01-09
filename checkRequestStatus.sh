@@ -2,10 +2,12 @@ clear
 echo Checking for an OneTouch Approval Request Status
 echo
 echo Request
-echo curl "http://api.authy.com/onetouch/\$AUTHY_API_FORMAT/approval_requests/\$UUID?api_key=\$AUTHY_API_KEY"
+echo curl "http://api.authy.com/onetouch/\$AUTHY_API_FORMAT/approval_requests/\$UUID" \
+echo -H "X-Authy-API-Key: \$AUTHY_API_KEY"
 echo
 echo Response
-curl "http://api.authy.com/onetouch/$AUTHY_API_FORMAT/approval_requests/$1?api_key=$AUTHY_API_KEY"
+curl "http://api.authy.com/onetouch/$AUTHY_API_FORMAT/approval_requests/$1" \
+-H "X-Authy-API-Key: $AUTHY_API_KEY"
 echo
 
 
