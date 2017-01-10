@@ -64,6 +64,8 @@ For a deeper look into our APIs check out our docs:
 
 1. **Phone Verification - phoneVerificatioRequest.sh|.bat / phoneVerificationCheck.sh|.bat** - The Authy Phone Verification API allows you to verify that the user has the device in their possession. The Authy Phone Verification API lets you request a verification code to be sent to the user and also verify that the code received by the user is valid.
 
+1. **Delete User - deleteUser.sh|bat** - If you want to remove users from your application you can use the delete API. Note, deleting a user will NOT immediately disable token verifications, as a 24 hour delay is typical before the user is permanently removed from the application.
+
 That's it!
 
 ## POSTMAN DEMO
