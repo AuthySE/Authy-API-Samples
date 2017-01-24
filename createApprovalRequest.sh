@@ -13,7 +13,7 @@ echo -d logos[][res]='low'
 echo -d logos[][url]='http://example.com/logos/default.png'
 echo
 echo Response
-curl -X POST "http://api.authy.com/onetouch/$AUTHY_API_FORMAT/users/$AUTHY_ID/approval_requests?api_key=$AUTHY_API_KEY" \
+curl -X POST "http://api.authy.com/onetouch/$AUTHY_API_FORMAT/users/$AUTHY_ID/approval_requests" \
 -H "X-Authy-API-Key: $AUTHY_API_KEY" \
 -d message="$OT_MESSAGE" \
 -d details="$OT_DETAILS" \
