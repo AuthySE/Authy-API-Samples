@@ -5,7 +5,7 @@
 Here you will learn how to use the Authy REST APIs to perform the user registration, send SMS, place a voice call, verify the token, etc.
 
 
-[Learn more about the Authy REST APIs](http://docs.authy.com/).
+[Learn more about the Authy REST APIs](https://docs.authy.com/).
 
 ## Quickstart
 
@@ -43,10 +43,10 @@ Before you run any of the following scripts, make sure you have execution permis
    ```
 
 For a deeper look into our APIs check out our docs:
-* [Authy OneTouch](http://docs.authy.com/onetouch.html)
-* [TOTP - Time-based One Time Password](http://docs.authy.com/totp.html)
-* [Phone Intelligence](http://docs.authy.com/phone_intelligence.html)
-* [Phone Verification](http://docs.authy.com/phone_verification.html)
+* [Authy OneTouch](https://docs.authy.com/onetouch.html)
+* [TOTP - Time-based One Time Password](https://docs.authy.com/totp.html)
+* [Phone Intelligence](https://docs.authy.com/phone_intelligence.html)
+* [Phone Verification](https://docs.authy.com/phone_verification.html)
 
 1. **User Registration - userRegistration.sh|.bat** - Before you can secure a user's login you need to create an Authy user. Authy requires you to send an email, cellphone and country code for the user to be registered. In response you get an Authy ID which you must then store with your user's profile information in your own application/database.
 
