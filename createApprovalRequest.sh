@@ -17,5 +17,5 @@ curl -X POST "https://api.authy.com/onetouch/$AUTHY_API_FORMAT/users/$AUTHY_ID/a
 -H "X-Authy-API-Key: $AUTHY_API_KEY" \
 -d message="$OT_MESSAGE" \
 -d details="$OT_DETAILS" \
--d seconds_to_expire="$OT_TTL"
+-d seconds_to_expire="$OT_TTL" | underscore print --outfmt pretty
 echo

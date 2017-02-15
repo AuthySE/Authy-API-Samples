@@ -7,5 +7,5 @@ echo -H "X-Authy-API-Key: \$AUTHY_API_KEY"
 echo 
 echo Response
 curl "https://api.authy.com/protected/$AUTHY_API_FORMAT/sms/$AUTHY_ID?force=true" \
--H "X-Authy-API-Key: $AUTHY_API_KEY"
+-H "X-Authy-API-Key: $AUTHY_API_KEY" | underscore print --outfmt pretty
 echo
