@@ -70,7 +70,7 @@ That's it!
 We've also uploaded a Postman (v2) collection of API calls and a demo environment. 
 [Postman Env](https://github.com/AuthySE/Authy-API-Samples/blob/master/postman/GITHUB%2520DEMO%2520ENV.postman_environment.json) | [Postman Collection](https://github.com/AuthySE/Authy-API-Samples/blob/master/postman/Authy%2520API%2520for%2520Github.postman_collection.json)
 
-Before using, you'll need to register with Authy for an API key and then edit the postman environment with the appropriate information.
+[You can simply import them into your Postman](postman/SETUP_INSTRUCTIONS.md). Before using, you'll need to register with Authy for an API key and then edit the postman environment with the appropriate information.
 
 ![Phone Verification](https://github.com/AuthySE/Authy-API-Samples/blob/master/postman/postman.gif)
 
